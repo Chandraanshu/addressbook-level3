@@ -66,5 +66,12 @@ public class AddCommand extends Command {
             return new CommandResult(MESSAGE_DUPLICATE_PERSON);
         }
     }
-
+    
+    /**
+     * Returns true because command mutates data
+     */
+    @Override
+    public boolean isMutating() {
+        return true;
+    }
 }

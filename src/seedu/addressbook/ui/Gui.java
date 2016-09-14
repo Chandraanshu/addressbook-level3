@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import seedu.addressbook.logic.Logic;
 import seedu.addressbook.Main;
+import javafx.scene.image.Image;
 
 import java.io.File;
 import java.io.IOException;
@@ -32,6 +33,7 @@ public class Gui {
     public void start(Stage stage, Stoppable mainApp) throws IOException {
         mainWindow = createMainWindow(stage, mainApp);
         mainWindow.displayWelcomeMessage(version, logic.getStorageFilePath());
+        stage.getIcons().add(new Image("C:/Users/Chandraanshu Garg/Desktop/Java/2103/Week 6/addressbook-level3/src/seedu/addressbook/ui/icon.png"));
     }
 
     private MainWindow createMainWindow(Stage stage, Stoppable mainApp) throws IOException{
